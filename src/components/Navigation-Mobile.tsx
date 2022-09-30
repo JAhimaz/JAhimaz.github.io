@@ -37,6 +37,12 @@ const NavigationMobile = ({ className, changePage } : NavigationMobileProps) => 
                         <div><span onClick={() => navigate("experience")}>Experience</span></div>
                         <div><span onClick={() => navigate("portfolio")}>Portfolio</span></div>
                         <div><span onClick={() => navigate("contact")}>Contact</span></div>
+                                    
+                        <section className="logos">
+                            <GitHub onClick={() => goToSocial("https://github.com/JAhimaz")}/>
+                            <LinkedIn onClick={() => goToSocial("https://www.linkedin.com/in/joshuaahimaz/")}/>
+                            <Twitter onClick={() => goToSocial("https://twitter.com/TheCoolerJosh")}/>
+                        </section>
               </div> :
               null
             }
@@ -45,12 +51,7 @@ const NavigationMobile = ({ className, changePage } : NavigationMobileProps) => 
             </button>
 
 
-            {/*
-            <section className="logos">
-                <GitHub onClick={() => goToSocial("https://github.com/JAhimaz")}/>
-                <LinkedIn onClick={() => goToSocial("https://www.linkedin.com/in/joshuaahimaz/")}/>
-                <Twitter onClick={() => goToSocial("https://twitter.com/TheCoolerJosh")}/>
-            </section> */}
+
 
         </div>
     )
@@ -99,14 +100,11 @@ const StyledNavigationMobile = styled(NavigationMobile)`
             text-transform: uppercase;
             cursor: pointer;
             color: transparent;
-            transition: font-size 0.3s;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: white;
 
             &:hover {
               color: white;
-              font-size: 7.5vw;
-              transition: font-size 0.3s;
               ::before {
                   content: "_";
               }
@@ -117,21 +115,23 @@ const StyledNavigationMobile = styled(NavigationMobile)`
 
     .logos {
       display: flex;
+      width: 100%;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
+      margin-top: 2em;
       > * {
+          height: 5vh;
+          width: 5vh;
           margin: 0 1rem;
+          transition: 0.2s;
+          &:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            transform: scale(1.3);
       }
     }
 
-    .logos > * {
-      cursor: pointer;
-      transition: 0.2s;
-      &:hover {
-          color: #FFC107;
-      }
-    }
 
 
       

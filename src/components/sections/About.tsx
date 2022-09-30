@@ -97,10 +97,9 @@ const StyledAbout = styled(About)`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    overflow: hidden;
 
     @media (max-width: 768px) {
-      overflow: visible;
+
       margin-bottom: 4em;
     }
 
@@ -119,6 +118,9 @@ const StyledAbout = styled(About)`
 
       > :nth-child(2) {
         flex: 2;
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
 
       > :last-child {
