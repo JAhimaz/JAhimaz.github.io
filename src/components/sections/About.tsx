@@ -56,10 +56,22 @@ const StyledAbout = styled(About)`
   flex-direction: column;
   height: 100%;
 
+  overflow-y: auto;
+
   padding: 4rem;
 
   color: white;
   font-size: 2rem;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  span, h2 {
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
 
   b {
     color: #c488ff;
@@ -74,6 +86,11 @@ const StyledAbout = styled(About)`
     font-size: 1.2rem;
     font-weight: 300;
     text-align: justify;
+
+    @media (max-width: 768px) {
+      text-align: left;
+    }
+
   }
 
   .education {
@@ -81,6 +98,11 @@ const StyledAbout = styled(About)`
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      overflow: visible;
+      margin-bottom: 4em;
+    }
 
     > * {
       position: relative;

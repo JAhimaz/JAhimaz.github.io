@@ -15,7 +15,7 @@ const Navigation = ({ className, changePage } : NavigationProps) => {
     }
 
     return (
-        <div className={className}>
+        <div className={"navigation " + className}>
             <section className="logos">
                 <GitHub onClick={() => goToSocial("https://github.com/JAhimaz")}/>
                 <LinkedIn onClick={() => goToSocial("https://www.linkedin.com/in/joshuaahimaz/")}/>
@@ -88,9 +88,6 @@ const StyledNavigation = styled(Navigation)`
             }
           }
 
-        @media (max-width: 768px) {
-            display: none;
-        }
 
 
         display: flex;
@@ -99,7 +96,7 @@ const StyledNavigation = styled(Navigation)`
         height: 80%;
         > * {
             color: white;
-            font-size: 6.5rem;
+            font-size: 5vw;
             text-transform: uppercase;
             text-align: right;
 
@@ -112,7 +109,7 @@ const StyledNavigation = styled(Navigation)`
 
                 &:hover {
                     color: white;
-                    font-size: 9rem;
+                    font-size: 7.5vw;
                     transition: font-size 0.3s;
                     ::before {
                         content: "_";

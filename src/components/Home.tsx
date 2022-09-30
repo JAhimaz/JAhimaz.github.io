@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components"
 import Navigation from './Navigation';
+import NavigationMobile from './Navigation-Mobile';
 
 import About from "./sections/About";
 import Contact from "./sections/Contact";
@@ -31,12 +32,30 @@ const Home = ({ className } : HomeProps) => {
           <About />
         }
       </span>
-      <Navigation changePage={(page : string) => changePage(page)} />     
+      <NavigationMobile changePage={(page : string) => changePage(page)} />
+      <Navigation changePage={(page : string) => changePage(page)} />
     </div>
   )
 }
 
 const StyledHome = styled(Home)`
+
+  .navigation-mobile {
+    display: none;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navigation {
+      display: none;
+    }
+
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -77,10 +96,22 @@ const StyledHome = styled(Home)`
   .pages {
     width: 50%;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
     > section {
+
       -webkit-animation: slideIn 0.5s forwards;
       -moz-animation: slideIn 0.5s forwards;
       animation: slideIn 0.5s forwards;
+
+      @media (max-width: 768px) {
+        -webkit-animation: slideDown 0.5s forwards;
+        -moz-animation: slideDown 0.5s forwards;
+        animation: slideDown 0.5s forwards;
+      }
+  
     }
   }
 
@@ -106,6 +137,31 @@ const StyledHome = styled(Home)`
     }
     100% {
       transform: translateX(0);
+    }
+  }
+
+  @-webkit-keyframes slideDown {
+    0% {
+      transform: translateY(50vw);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @-moz-keyframes slideDown {
+    0% {
+      transform: translateY(50vw);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      transform: translateY(50vw);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 
