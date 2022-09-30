@@ -32,8 +32,8 @@ const Home = ({ className } : HomeProps) => {
           <About />
         }
       </span>
-      <NavigationMobile changePage={(page : string) => changePage(page)} />
-      <Navigation changePage={(page : string) => changePage(page)} />
+      <NavigationMobile changePage={(page : string) => changePage(page)} selectedPage={page} />
+      <Navigation changePage={(page : string) => changePage(page)} selectedPage={page} />
     </div>
   )
 }

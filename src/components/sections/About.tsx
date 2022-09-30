@@ -55,6 +55,17 @@ const StyledAbout = styled(About)`
   display: flex;
   flex-direction: column;
   height: 100%;
+  
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  padding: 1rem 0;
+
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   overflow-y: auto;
 

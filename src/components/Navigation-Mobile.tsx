@@ -10,9 +10,10 @@ import { ReactComponent as ChevronDown } from '../assets/chevron-double-down.svg
 type NavigationMobileProps = {
     className?: string
     changePage: (page: string) => void
+    selectedPage: string
 }
 
-const NavigationMobile = ({ className, changePage } : NavigationMobileProps) => {
+const NavigationMobile = ({ className, changePage, selectedPage } : NavigationMobileProps) => {
 
     const [isActive, setIsActive] = useState<boolean>(false);
 
@@ -33,10 +34,10 @@ const NavigationMobile = ({ className, changePage } : NavigationMobileProps) => 
         <div className={"navigation-mobile " + className}>
             { isActive ? 
               <div className="panel">
-                        <div><span onClick={() => navigate("aboutme")}>About Me</span></div>
-                        <div><span onClick={() => navigate("experience")}>Experience</span></div>
-                        <div><span onClick={() => navigate("portfolio")}>Portfolio</span></div>
-                        <div><span onClick={() => navigate("contact")}>Contact</span></div>
+                      <div><span onClick={() => navigate("aboutme")} className={selectedPage === "aboutme" ? "selected" : ""}>About Me</span></div>
+                      <div><span onClick={() => navigate("experience")} className={selectedPage === "experience" ? "selected" : ""}>Experience</span></div>
+                      <div><span onClick={() => navigate("portfolio")} className={selectedPage === "portfolio" ? "selected" : ""}>Portfolio</span></div>
+                      <div><span onClick={() => navigate("contact")} className={selectedPage === "contact" ? "selected" : ""}>Contact</span></div>
                                     
                         <section className="logos">
                             <GitHub onClick={() => goToSocial("https://github.com/JAhimaz")}/>
@@ -78,6 +79,13 @@ const StyledNavigationMobile = styled(NavigationMobile)`
             height: 3vh;
             width: 3vh;
         }
+    }
+
+    .selected {
+      -webkit-text-stroke-color: #c488ff !important;
+      :hover {
+        color: #c488ff !important;
+      }
     }
 
     .active, .accordion:hover {

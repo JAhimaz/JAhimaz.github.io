@@ -6,9 +6,10 @@ import { ReactComponent as Twitter } from '../assets/icons/twitter.svg';
 type NavigationProps = {
     className?: string
     changePage: (page: string) => void
+    selectedPage: string
 }
 
-const Navigation = ({ className, changePage } : NavigationProps) => {
+const Navigation = ({ className, changePage, selectedPage } : NavigationProps) => {
 
     const goToSocial = (social : string) => {
       window.open(social, "_blank", "noopener,noreferrer");
@@ -22,10 +23,10 @@ const Navigation = ({ className, changePage } : NavigationProps) => {
                 <Twitter onClick={() => goToSocial("https://twitter.com/TheCoolerJosh")}/>
             </section>
             <section className="navigation-items">
-                <div><span onClick={() => changePage("aboutme")}>About Me</span></div>
-                <div><span onClick={() => changePage("experience")}>Experience</span></div>
-                <div><span onClick={() => changePage("portfolio")}>Portfolio</span></div>
-                <div><span onClick={() => changePage("contact")}>Contact</span></div>
+                <div><span onClick={() => changePage("aboutme")} className={selectedPage === "aboutme" ? "selected" : ""}>About Me</span></div>
+                <div><span onClick={() => changePage("experience")} className={selectedPage === "experience" ? "selected" : ""}>Experience</span></div>
+                <div><span onClick={() => changePage("portfolio")} className={selectedPage === "portfolio" ? "selected" : ""}>Portfolio</span></div>
+                <div><span onClick={() => changePage("contact")} className={selectedPage === "contact" ? "selected" : ""}>Contact</span></div>
             </section>
         </div>
     )
@@ -37,6 +38,13 @@ const StyledNavigation = styled(Navigation)`
     justify-content: space-between;
     padding: 2rem;
     width: 50%;
+
+    .selected {
+      -webkit-text-stroke-color: #c488ff !important;
+      :hover {
+        color: #c488ff !important;
+      }
+    }
 
     .logos {
         -webkit-animation: slideInRight 0.5s forwards;
