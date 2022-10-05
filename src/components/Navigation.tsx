@@ -61,6 +61,9 @@ const StyledNavigation = styled(Navigation)`
             &:hover {
                 transition: 0.2s;
                 transform: scale(1.3);
+                > *:first-child {
+                  fill: #c488ff;
+                }    
             }
         }
     }
