@@ -67,8 +67,6 @@ const StyledAbout = styled(About)`
     display: none;
   }
 
-  overflow-y: auto;
-
   padding: 4rem;
 
   color: white;
@@ -107,10 +105,8 @@ const StyledAbout = styled(About)`
   .education {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-
+    margin-bottom: 4em;
     @media (max-width: 768px) {
-
       margin-bottom: 4em;
     }
 

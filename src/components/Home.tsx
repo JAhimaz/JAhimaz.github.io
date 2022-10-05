@@ -23,6 +23,7 @@ const Home = ({ className } : HomeProps) => {
   return (
     <div className={className}>
       <span className="bg-text">JOSHUA<br/>{page.toUpperCase()}<br/>AHIMAZ</span>
+      <Navigation changePage={(page : string) => changePage(page)} selectedPage={page} />
       <span className="pages">
         {
           page === "aboutme" ? <About /> :
@@ -33,7 +34,6 @@ const Home = ({ className } : HomeProps) => {
         }
       </span>
       <NavigationMobile changePage={(page : string) => changePage(page)} selectedPage={page} />
-      <Navigation changePage={(page : string) => changePage(page)} selectedPage={page} />
     </div>
   )
 }
@@ -117,7 +117,7 @@ const StyledHome = styled(Home)`
 
   @-webkit-keyframes slideIn {
     0% {
-      transform: translateX(-50vw);
+      transform: translateX(50vw);
     }
     100% {
       transform: translateX(0);
@@ -125,7 +125,7 @@ const StyledHome = styled(Home)`
   }
   @-moz-keyframes slideIn {
     0% {
-      transform: translateX(-50vw);
+      transform: translateX(50vw);
     }
     100% {
       transform: translateX(0);
@@ -133,7 +133,7 @@ const StyledHome = styled(Home)`
   }
   @keyframes slideIn {
     0% {
-      transform: translateX(-50vw);
+      transform: translateX(50vw);
     }
     100% {
       transform: translateX(0);

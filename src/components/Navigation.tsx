@@ -52,7 +52,7 @@ const StyledNavigation = styled(Navigation)`
         animation: slideInRight 0.5s forwards;
         display: flex;
         flex-direction: row;
-        justify-content: right;
+        justify-content: flex-start;
         > * {
             width: 2.5rem;
             margin-left: 1.5rem;
@@ -73,7 +73,7 @@ const StyledNavigation = styled(Navigation)`
 
         @-webkit-keyframes slideInRight {
             0% {
-              transform: translateX(50vw);
+              transform: translateX(-50vw);
             }
             100% {
               transform: translateX(0);
@@ -81,7 +81,7 @@ const StyledNavigation = styled(Navigation)`
           }
           @-moz-keyframes slideInRight {
             0% {
-              transform: translateX(50vw);
+              transform: translateX(-50vw);
             }
             100% {
               transform: translateX(0);
@@ -89,7 +89,7 @@ const StyledNavigation = styled(Navigation)`
           }
           @keyframes slideInRight {
             0% {
-              transform: translateX(50vw);
+              transform: translateX(-50vw);
             }
             100% {
               transform: translateX(0);
@@ -106,7 +106,7 @@ const StyledNavigation = styled(Navigation)`
             color: white;
             font-size: 5vw;
             text-transform: uppercase;
-            text-align: right;
+            text-align: left;
 
             > span {
                 cursor: pointer;
