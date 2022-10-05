@@ -29,7 +29,7 @@ const Home = ({ className } : HomeProps) => {
           page === "aboutme" ? <About /> :
           page === "experience" ? <Experience /> :
           page === "portfolio" ? <Portfolio /> :
-          page === "contact" ? <Contact /> :
+          // page === "contact" ? <Contact /> :
           <About />
         }
       </span>

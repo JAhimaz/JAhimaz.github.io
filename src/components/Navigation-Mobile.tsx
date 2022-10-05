@@ -37,7 +37,7 @@ const NavigationMobile = ({ className, changePage, selectedPage } : NavigationMo
                       <div><span onClick={() => navigate("aboutme")} className={selectedPage === "aboutme" ? "selected" : ""}>About Me</span></div>
                       <div><span onClick={() => navigate("experience")} className={selectedPage === "experience" ? "selected" : ""}>Experience</span></div>
                       <div><span onClick={() => navigate("portfolio")} className={selectedPage === "portfolio" ? "selected" : ""}>Portfolio</span></div>
-                      <div><span onClick={() => navigate("contact")} className={selectedPage === "contact" ? "selected" : ""}>Contact</span></div>
+                      {/* <div><span onClick={() => navigate("contact")} className={selectedPage === "contact" ? "selected" : ""}>Contact</span></div> */}
                                     
                         <section className="logos">
                             <GitHub onClick={() => goToSocial("https://github.com/JAhimaz")}/>
@@ -80,7 +80,7 @@ const StyledNavigationMobile = styled(NavigationMobile)`
             width: 3vh;
         }
     }
-
+    
     .selected {
       -webkit-text-stroke-color: #c488ff !important;
       :hover {

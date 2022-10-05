@@ -26,7 +26,7 @@ const Navigation = ({ className, changePage, selectedPage } : NavigationProps) =
                 <div><span onClick={() => changePage("aboutme")} className={selectedPage === "aboutme" ? "selected" : ""}>About Me</span></div>
                 <div><span onClick={() => changePage("experience")} className={selectedPage === "experience" ? "selected" : ""}>Experience</span></div>
                 <div><span onClick={() => changePage("portfolio")} className={selectedPage === "portfolio" ? "selected" : ""}>Portfolio</span></div>
-                <div><span onClick={() => changePage("contact")} className={selectedPage === "contact" ? "selected" : ""}>Contact</span></div>
+                {/* <div><span onClick={() => changePage("contact")} className={selectedPage === "contact" ? "selected" : ""}>Contact</span></div> */}
             </section>
         </div>
     )
@@ -119,7 +119,7 @@ const StyledNavigation = styled(Navigation)`
                     color: white;
                     font-size: 7.5vw;
                     transition: font-size 0.3s;
-                    ::before {
+                    ::after {
                         content: "_";
                     }
 
