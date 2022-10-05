@@ -14,7 +14,7 @@ type HomeProps = {
 
 const Home = ({ className } : HomeProps) => { 
 
-  const [page, setPage] = useState<string>("about");
+  const [page, setPage] = useState<string>("aboutme");
 
   const changePage = (page : string) => {
     setPage(page);
