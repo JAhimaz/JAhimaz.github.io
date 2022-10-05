@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cd37218d.css",
-    "main.js": "/static/js/main.58d41c41.js",
+    "main.js": "/static/js/main.1c240b08.js",
     "static/media/newsletter-scraper.gif": "/static/media/newsletter-scraper.424019e6c6e8ac35b456.gif",
     "static/media/niuvan-web.png": "/static/media/niuvan-web.f6ebe602707c5796ba13.png",
     "static/media/knapsack-solver.png": "/static/media/knapsack-solver.f255db7e6eccc978c8f0.png",
@@ -25,10 +25,10 @@
     "static/media/chevron-double-down.svg": "/static/media/chevron-double-down.25cb5f60fe76c1fa845835ac11432994.svg",
     "static/media/chevron-double-up.svg": "/static/media/chevron-double-up.3e107886bba6c9be69795369c5e6e3a9.svg",
     "main.cd37218d.css.map": "/static/css/main.cd37218d.css.map",
-    "main.58d41c41.js.map": "/static/js/main.58d41c41.js.map"
+    "main.1c240b08.js.map": "/static/js/main.1c240b08.js.map"
   },
   "entrypoints": [
     "static/css/main.cd37218d.css",
-    "static/js/main.58d41c41.js"
+    "static/js/main.1c240b08.js"
   ]
 }
