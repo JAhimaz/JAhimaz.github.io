@@ -14,6 +14,8 @@ import djmglobalWeb from '../assets/previews/djmglobal-web.png';
 import discordBotBnb from '../assets/previews/discord-bot-bnb.png';
 import cryptoDashboard from '../assets/previews/crypto-dashboard.png';
 import myGithub from '../assets/previews/my-github.png';
+import ramenStudio from '../assets/previews/ramen-studio.png';
+import web3careers from '../assets/previews/web3careers.png';
 
 export const experiences = [
   {
@@ -37,10 +39,20 @@ export const experiences = [
     url: "https://serverminer.com/",
   },
   {
+    company: "Webbio Design",
+    role: "Founder, Web Developer",
+    description: "Started a small scale web development business that has taken on 7 clients. A somewhat side hustle during my university studies with a small team of 5",
+    logo: "https://avatars.githubusercontent.com/u/101805416?s=400&v=4",
+    tags: ["React", "Managing", "Web Design", "UI/UX", "Team Lead"],
+    startDate: "Jan 2020",
+    endDate: "Present",
+    url: "#",
+  },
+  {
     company: "PolicyStreet",
     role: "Intern Frontend Developer",
     description: "working/maintaining on the front-end webpages of the site using ReactJS and Redux as well as backend touching NodeJS. Building full pages with API implementation.",
-    logo: "https://assets.policystreet.com/pslogo.svg",
+    logo: "https://www.policystreet.com/wp-content/uploads/ps-logo-1.png",
     tags: ["React", "Redux", "NodeJS", "Typescript", "AWS"],
     startDate: "Dec 2020",
     endDate: "Mar 2021",
@@ -72,6 +84,20 @@ export const projects = [
     preview: newPortfolio,
     tags: ["React", "Typescript"],
     url: "#"
+  },
+  {
+    name: "Ramen Studio",
+    description: "Ramen Studio is an NFT Music Player for the RMRK Parachain on the Polkadot Blockchain. Paste your address and listen to all your RMRK music in one place!",
+    preview: ramenStudio,
+    tags: ["React", "Typescript", "Polkadot", "RMRK"],
+    url: "https://joshuaahimaz.com/Ramen-Studio/"
+  },
+  {
+    name: "Web3 Careers",
+    description: "Web3Careers is a job board for the decentralized web. Designed for developers, designers, and other professionals in the blockchain space, Web3Careers is a place to find and post jobs in the blockchain space.",
+    preview: web3careers,
+    tags: ["React", "Typescript", "Web3", "In-progress", "Front-End"],
+    url: "https://github.com/Web3Careers/web3careers/"
   },
   {
     name: "Real-time Social Distance Monitor",

@@ -28,7 +28,7 @@ const Experience = ({ className } : { className ?: string }) => {
               <div className="job-card" key={i} onClick={() => goToPage(job.url) }>
                 {/* make the image have a background but its the image enlarged and blurred */}
                 <div className="job-logo">
-                  <img src={job.logo} alt="" />
+                  <img src={job.logo} alt="" width={100} />
                   <img src={job.logo} alt="" className="logo-bg" />
                 </div>
                 <div className="job-title">
@@ -131,8 +131,10 @@ const StyledExperience = styled(Experience)`
 
       position: relative;
 
+      // image but not including .logo-bg
       img {
-        width: auto;
+        max-width: 600px;
+        min-width: 200px;
         height: 60px;
         object-fit: contain;
         filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
