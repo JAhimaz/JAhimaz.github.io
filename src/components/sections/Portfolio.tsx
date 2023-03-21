@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { projects } from "../../libs/data"
+import { Project } from "../../libs/types"
 
 type portfolio = {
   name: string,
@@ -9,7 +9,7 @@ type portfolio = {
   url: string
 }
 
-const Portfolio = ({ className } : { className ?: string }) => {
+const Portfolio = ({ className, projects } : { className ?: string, projects: Project[] }) => {
 
   const goToPage = (url : string) => {
     window.open(url, "_blank", "noopener,noreferrer");

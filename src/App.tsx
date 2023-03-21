@@ -1,9 +1,16 @@
 
+import { RecoilRoot } from 'recoil';
+import { Suspense } from 'react'
 import { Home } from './components';
+import Loading from './components/Loading';
 
 function App() {
   return (
-    <Home />
+    <RecoilRoot>
+      <Suspense fallback={<Loading />}>
+        <Home />
+      </Suspense>
+    </RecoilRoot>
   );
 }
 
