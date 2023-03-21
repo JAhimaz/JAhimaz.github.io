@@ -1,3 +1,5 @@
+import styled from "styled-components"
+
 export const education = [
   {
     degree: "MSc in Computer Science",
@@ -20,4 +22,36 @@ export const education = [
     yearEnd: 2019,
     logo: "https://varrn-sunway.org/wp-content/uploads/2021/02/Sunway-University-A-Class-Above-white.png"
   },
+]
+
+export const skills = [
+  "ReactJS",
+  "TypeScript",
+  "Frontend Development",
+  "FireBase",
+  "Web3.js / Ethers.js",
+  "Git",
+  "Vite",
+  "Webpack / Rollup",
+  "NodeJS",
+  "APIs",
+  "ExpressJS",
+  "Java",
+  "Python",
+  "WebScraping (BeautifulSoup4)",
+  "Linux",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "SQL",
+  "PostgreSQL",
+  "Bootstrap",
+  "TailwindCSS",
+  "MaterialUI",
+  "Bootstrap",
+  "Emotion-Styled",
+  "Unity3D",
+  "Cinema 4D",
+  "Figma",
+  "Photoshop"
 ]

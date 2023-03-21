@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { education } from "../../libs/data"
+import { education, skills } from "../../libs/data"
 
 type educationType = {
   degree: string,
@@ -20,6 +20,14 @@ const About = ({ className } : { className ?: string }) => {
         I am a software engineer based in Kuala Lumpur, Malaysia. My love for programming started at the age of 12, and my passion for building
         elements that would help people has lead me down the path of studying Computer Science.
       </p>
+
+      <div className="job-tags">
+        { skills.map((skill, index) => {
+          return (
+            <span key={index}>{skill}</span>
+          )
+        })}
+      </div>
 
       <p>
         Some of my achievements that I'd love to share are:
@@ -101,6 +109,30 @@ const StyledAbout = styled(About)`
     }
 
   }
+
+  .job-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+
+      span {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        background-color: #1b1b1b;
+
+        :hover {
+          background-color: #2b2b2b;
+        }
+      }
+    }
 
   .education {
     display: flex;

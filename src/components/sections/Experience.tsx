@@ -219,7 +219,6 @@ const StyledExperience = styled(Experience)`
           background-color: #2b2b2b;
         }
       }
-
     }
 `
 
