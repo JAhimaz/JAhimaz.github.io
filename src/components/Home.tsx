@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useRecoilValue } from "recoil";
 import styled from "styled-components"
+import experiencesState from "../libs/experiences/provider";
+import projectsState from "../libs/projects/provider";
 import Navigation from './Navigation';
 import NavigationMobile from './Navigation-Mobile';
 
 import About from "./sections/About";
-import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
 import Portfolio from "./sections/Portfolio";
 
@@ -15,6 +17,8 @@ type HomeProps = {
 const Home = ({ className } : HomeProps) => { 
 
   const [page, setPage] = useState<string>("aboutme");
+  const experiences = useRecoilValue(experiencesState)
+  const projects = useRecoilValue(projectsState)
 
   const changePage = (page : string) => {
     setPage(page);
@@ -27,9 +31,8 @@ const Home = ({ className } : HomeProps) => {
       <span className="pages">
         {
           page === "aboutme" ? <About /> :
-          page === "experience" ? <Experience /> :
-          page === "portfolio" ? <Portfolio /> :
-          // page === "contact" ? <Contact /> :
+          page === "experience" ? <Experience experiences={experiences} /> :
+          page === "portfolio" ? <Portfolio projects={projects} /> :
           <About />
         }
       </span>

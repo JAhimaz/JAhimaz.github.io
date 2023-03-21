@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { experiences } from "../../libs/data"
+import { Experience as ExperienceType } from "../../libs/types"
 
 type Job = {
   company: string,
@@ -12,7 +12,7 @@ type Job = {
   url: string
 }
 
-const Experience = ({ className } : { className ?: string }) => {
+const Experience = ({ className, experiences } : { className ?: string, experiences: ExperienceType[] }) => {
 
   const goToPage = (url : string) => {
     window.open(url, "_blank", "noopener,noreferrer");
